@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Solid White Background with rounded corners -->
+  <rect width="100" height="100" rx="22" fill="#FFFFFF" />
+  
+  <!-- Bold Editorial Text -->
+  <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="76" font-weight="900">
+    <tspan fill="#111111">S</tspan><tspan fill="#E02438">.</tspan>
+  </text>
+</svg>

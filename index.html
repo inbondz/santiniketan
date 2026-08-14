@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,9 +75,9 @@
       display: flex;
       gap: 1.5rem;
       flex-wrap: nowrap;
-      overflow-x: auto; /* Allows swiping on very small screens */
+      overflow-x: auto; 
       padding-bottom: 0.2rem;
-      scrollbar-width: none; /* Hides scrollbar */
+      scrollbar-width: none; 
     }
     
     .nav-links::-webkit-scrollbar {
@@ -185,7 +186,7 @@
 
     .ig-box {
       padding: 1.5rem;
-      background-color: #FFF1F2; /* Very faint red */
+      background-color: #FFF1F2;
       border-left: 4px solid var(--brand-red);
       border-radius: 0 8px 8px 0;
       margin: 1.5rem 0;
@@ -287,7 +288,7 @@
         <div class="card">
           <h2>The Initiative</h2>
           <p style="font-size: 1.2rem; color: #111111; font-weight: 700; line-height: 1.5;">
-            Santiniketan Online was created by an anonymous vigilant dedicated to ensuring that the University and the Santiniketan community remain entirely free from mischievous behavior, institutional corruption, crime, and nepotism.
+            Santiniketan Online was created by an anonymous vigilante dedicated to ensuring that the University and the Santiniketan community remain entirely free from misconduct, institutional corruption, crime, and nepotism.
           </p>
         </div>
         <div class="card">
@@ -304,11 +305,11 @@
         <h1>Terms of Service</h1>
         <div class="card">
           <h2>Warning on Joining SOA</h2>
-          <p>Becoming a <a href="#soa" class="text-link">Santiniketan Online Agent (SOA)</a> carries strict operational responsibility. Agents must never manufacture evidence, commit defamation, or break physical laws to obtain information. Deviation from our verification protocols results in immediate disavowal.</p>
+          <p>Becoming a <a href="#soa" class="text-link">Santiniketan Online Agent (SOA)</a> carries strict operational responsibilities. Agents must never manufacture evidence, commit defamation, or break the law to obtain information. Any deviation from our verification protocols will result in immediate disavowal.</p>
         </div>
         <div class="card">
           <h2>News Credibility & "Allegedly"</h2>
-          <p>Unless an individual has been formally convicted in a recognized court of law, all incidents and misconduct assertions published on our platform are legally classified as allegations. The strict usage of the word "allegedly" is enforced to maintain neutrality and protect the platform from censorship.</p>
+          <p>Unless an individual has been formally convicted in a recognized court of law, all incidents and assertions of misconduct published on our platform are legally classified as allegations. The strict usage of the word "allegedly" is enforced to maintain neutrality and protect the platform from censorship.</p>
         </div>
         <div class="card">
           <h2>Grievance Submissions</h2>
@@ -323,7 +324,7 @@
         <h1>Privacy Policy</h1>
         <div class="card">
           <h2>Data Collection</h2>
-          <p>Santiniketan Online is engineered with a privacy-by-default architecture. This static website utilizes zero invasive tracking cookies, no server-side browsing logs, and no IP harvesting mechanics. We collect absolutely no data that breaches your personal privacy.</p>
+          <p>Santiniketan Online is engineered with a privacy-by-default architecture. This static website utilizes zero invasive tracking cookies, no server-side browsing logs, and no IP-harvesting mechanics. We collect absolutely no data that breaches your personal privacy.</p>
         </div>
         <div class="card">
           <h2>Protection of SOA Officers</h2>
@@ -342,15 +343,15 @@
         <h1>Join SOA</h1>
         <div class="card">
           <h2>How the SOA Network Works</h2>
-          <p>Santiniketan Online Agents (SOAs) serve as our ground verification and intelligence units. Agents gather first-hand documentation regarding University departments, regional Santiniketan issues, hostel affairs, administrative shortcomings, and financial/academic corruption.</p>
+          <p>Santiniketan Online Agents (SOAs) serve as our ground verification and intelligence units. Agents gather first-hand documentation regarding University departments, regional Santiniketan issues, hostel affairs, administrative shortcomings, and financial or academic corruption.</p>
           <p>We guarantee complete operational discretion. Your identity remains entirely hidden from the public and the university administration.</p>
         </div>
         <div class="card">
           <h2>Agent Requirements</h2>
           <ul style="padding-left: 1.25rem; color: var(--text-gray); margin-bottom: 1rem;">
-            <li style="margin-bottom: 0.5rem;">You must possess a credible public profile that verifies you are an active part of the campus/local environment.</li>
-            <li style="margin-bottom: 0.5rem;">Demonstrated passion for regional integrity, ethical reporting, and student rights.</li>
-            <li>Willingness to do the hard work required to verify incidents before submission.</li>
+            <li style="margin-bottom: 0.5rem;">Possess a credible public profile that verifies you are an active part of the campus or local environment.</li>
+            <li style="margin-bottom: 0.5rem;">Demonstrate a passion for regional integrity, ethical reporting, and student rights.</li>
+            <li>Show a willingness to do the hard work required to verify incidents before submission.</li>
           </ul>
         </div>
         <div class="card">
@@ -367,37 +368,28 @@
     };
 
     function router() {
-      // 1. Get hash, default to 'home'
       let hash = window.location.hash.substring(1);
       if (!hash || !pages[hash]) {
         hash = 'home';
-        // Use replaceState so hitting the "back" button doesn't get stuck in a loop
         window.history.replaceState(null, null, '#home');
       }
 
-      // 2. Inject Content
       document.getElementById('app-content').innerHTML = pages[hash];
 
-      // 3. Handle Active Tab Styling
-      // Remove 'active' class from all navigation links
       const navLinks = document.querySelectorAll('.nav-links a');
       navLinks.forEach(link => link.classList.remove('active'));
       
-      // Add 'active' class to the currently clicked link based on the hash
       const activeLink = document.getElementById('nav-' + hash);
       if (activeLink) {
         activeLink.classList.add('active');
       }
 
-      // 4. Scroll to top
       window.scrollTo(0, 0);
     }
 
-    // Run router on navigation or refresh
     window.addEventListener('hashchange', router);
     window.addEventListener('DOMContentLoaded', router);
 
-    // Live Clock (IST)
     function updateClock() {
       const now = new Date();
       const options = {
@@ -419,4 +411,3 @@
 
 </body>
 </html>
-
